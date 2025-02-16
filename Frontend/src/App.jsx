@@ -54,7 +54,7 @@ function App() {
           <div onClick={reviewCode} className="review">Review</div>
         </div>
         <div className="right">
-          {loading ? <p>Fetching Data from Server ...<br>Reviewing your code, please wait...</br></p> : <Markdown rehypePlugins={[rehypeHighlight]}>{review}</Markdown>}
+          {loading ? <p>Fetching Data from Server ...</p> : <Markdown rehypePlugins={[rehypeHighlight]}>{review}</Markdown>}
         </div>
       </main>
     </>
