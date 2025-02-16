@@ -19,6 +19,7 @@ function App() {
   useEffect(() => {
     prism.highlightAll();
   }, []);
+  //
 
   async function reviewCode() {
     setLoading(true);  // Show loading message
@@ -54,7 +55,7 @@ function App() {
           <div onClick={reviewCode} className="review">Review</div>
         </div>
         <div className="right">
-          {loading ? <p>Fetching Data from Server ...</p> : <Markdown rehypePlugins={[rehypeHighlight]}>{review}</Markdown>}
+          {loading ? <p>Please wait it may take some time...    Reviewing your code and analyzing....</p> : <Markdown rehypePlugins={[rehypeHighlight]}>{review}</Markdown>}
         </div>
       </main>
     </>
