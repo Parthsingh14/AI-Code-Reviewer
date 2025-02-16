@@ -1,8 +1,0 @@
-[phases.setup]
-nixPkgs = ["nodejs", "yarn"]
-
-[phases.build]
-cmd = "yarn install"
-
-[phases.start]
-cmd = "node index.js"
