@@ -9,6 +9,24 @@ body,
 #root {
   height: 100%;
   width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --code-bg: #f5f5f5;
+  --review-bg: rgb(219, 219, 255);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --code-bg: #0c0c0c;
+    --review-bg: #4444ff;
+  }
 }
 
 main {
@@ -27,7 +45,7 @@ main .right {
 }
 
 main .left {
-  background-color: #000000;
+  background-color: var(--bg-color);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -40,13 +58,13 @@ main .left {
   width: 100%;
   margin: 0;
   border-radius: 0.7rem;
-  background-color: #0c0c0c;
+  background-color: var(--code-bg);
 }
 
 main .left .review {
-  background-color: rgb(219, 219, 255);
+  background-color: var(--review-bg);
   margin-top: 0.5rem;
-  color: #000000;
+  color: var(--text-color);
   padding: 0.5rem 2rem;
   font-weight: 500;
   cursor: pointer;
@@ -57,7 +75,7 @@ main .left .review {
 }
 
 main .right {
-  background-color: #343434;
+  background-color: var(--code-bg);
   padding: 1rem 2rem;
   font-size: 0.9rem;
   overflow: auto;
