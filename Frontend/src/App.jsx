@@ -23,7 +23,7 @@ function App() {
   async function reviewCode() {
     setLoading(true);  // Show loading message
     try {
-      const response = await axios.post('https://ai-code-reviewer-backend-pq7m.onrender.com/ai/get-review', { code });
+      const response = await axios.post('https://ai-code-reviewer-bznp.onrender.com/ai/get-review', { code });
       setReview(response.data);
     } catch (error) {
       setReview(`Error fetching review. Try again. ${error.message}`);
