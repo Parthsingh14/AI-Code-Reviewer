@@ -82,11 +82,13 @@ Your reviews should **empower developers** to write **better, more efficient, an
 
 
 async function generateContent(prompt) {
-    const result = await model.generateContent(prompt);
-
-    console.log(result.response.text())
-
-    return result.response.text();
+    try {
+   const result = await model.generateContent(prompt);
+   return result.response.text();
+} catch (error) {
+   console.error("Gemini Error:", error);
+   return "AI service temporarily unavailable. Please try again later.";
+}
 
 }
 
